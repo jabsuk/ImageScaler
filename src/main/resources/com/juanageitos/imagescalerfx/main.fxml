@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="427.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.juanageitos.imagescalerfx.controller.Main">
+   <children>
+      <Label layoutX="656.0" layoutY="31.0" text="Scaled instances">
+         <tooltip>
+            <Tooltip text="Empty Tooltip" />
+         </tooltip>
+      </Label>
+      <Label fx:id="txtImagesLocation" layoutX="19.0" layoutY="31.0" text="Images">
+         <tooltip>
+            <Tooltip fx:id="toolImagesLocation" text="Images..." />
+         </tooltip>
+      </Label>
+      <ListView fx:id="listScalable" layoutX="19.0" layoutY="51.0" onMouseClicked="#selectScalable" prefHeight="334.0" prefWidth="178.0" />
+      <ListView fx:id="listScaled" layoutX="656.0" layoutY="51.0" onMouseClicked="#selectScaled" prefHeight="334.0" prefWidth="178.0" />
+      <ImageView fx:id="imgPreview" fitHeight="313.0" fitWidth="416.0" layoutX="219.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imgPreview.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnStart" layoutX="223.0" layoutY="36.0" mnemonicParsing="false" onAction="#startScale" prefHeight="31.0" prefWidth="64.0" text="Start" />
+      <Text fx:id="txtStatusMain" layoutX="19.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 of 0 tasks finished." />
+      <Button layoutX="384.0" layoutY="36.0" mnemonicParsing="false" onAction="#goCharts" prefHeight="31.0" prefWidth="167.0" text="Threads performance" />
+      <Button fx:id="btnBrowse" layoutX="298.0" layoutY="37.0" mnemonicParsing="false" onAction="#selectDirectory" prefHeight="31.0" prefWidth="77.0" text="Browse" />
+      <CheckBox fx:id="bxModal" layoutX="563.0" layoutY="41.0" mnemonicParsing="false" onAction="#setModal" selected="true" text="Modal" />
+   </children>
+</Pane>
